@@ -29,8 +29,10 @@ db.once("open", () => console.log("Connected to Database"));
 
 const userRouter = require("./controller/user");
 app.use("/auth", userRouter);
+const boardRouter = require("./controller/board");
+app.use("/board", boardRouter);
 app.use("*", (req, res) => {
-  res.status(404).send('route not found');
+  res.status(404).send("route not found");
 });
 
 const port = process.env.PORT || 4999;

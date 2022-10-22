@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     required: [true, "firstName is required"],
     validate: {
       validator: (v) => {
-        return (v.length > 0) & (v.length <= 30);
+        return (v.length > 0) && (v.length <= 30);
       },
       message: () => "firstName should not have more than 30 characters",
     },
@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
     required: [true, "lastName is required"],
     validate: {
       validator: (v) => {
-        return (v.length > 0) & (v.length <= 30);
+        return (v.length > 0) && (v.length <= 30);
       },
       message: () => "lastName should not have more than 30 characters",
     },
