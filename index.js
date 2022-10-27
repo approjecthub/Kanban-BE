@@ -31,6 +31,8 @@ const userRouter = require("./controller/user");
 app.use("/auth", userRouter);
 const boardRouter = require("./controller/board");
 app.use("/board", boardRouter);
+const taskRouter = require("./controller/task");
+app.use("/task", taskRouter);
 app.use("*", (req, res) => {
   res.status(404).send("route not found");
 });
