@@ -119,7 +119,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"task 2\",\n    \"description\": \"task 2 description\",\n    \"status\": \"todo\",\n    \"board\": \"635413a28cf299e3a0677cb0\",\n    \"subtasks\": [\n        {\n            \"title\": \"subtask 2\",\n            \"description\": \"task 2 description\",\n            \"status\": \"todo\"\n        },\n        {\n            \"title\": \"subtask 2\",\n            \"description\": \"task 2 description\",\n            \"status\": \"todo\"\n        }\n    ]\n}",
+					"raw": "{\n    \"title\": \"task 2\",\n    \"description\": \"task 2 description\",\n    \"status\": \"todo\",\n    \"boardId\": \"635413a28cf299e3a0677cb0\",\n    \"subtasks\": [\n        {\n            \"title\": \"subtask 2\",\n            \"description\": \"task 2 description\",\n            \"status\": \"todo\"\n        },\n        {\n            \"title\": \"subtask 2\",\n            \"description\": \"task 2 description\",\n            \"status\": \"todo\"\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -173,7 +173,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzYmMzY2RhMjc4MzMzNDExNGQ3YmIiLCJpYXQiOjE2NjY4OTcxMzYsImV4cCI6MTY2NjkwMDczNn0.bqDADCYfPfWOdZTZApfRYlZKtgAU2bUWhqwr0cE57o4",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzYmMzY2RhMjc4MzMzNDExNGQ3YmIiLCJpYXQiOjE2NjcwNjUzMjYsImV4cCI6MTY2NzA2ODkyNn0.RaFtbFDtpgfRzxD0WAIMc-iPjPMxyGspfWcxgCdgeJQ",
 				"type": "string"
 			}
 		]

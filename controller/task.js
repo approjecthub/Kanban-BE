@@ -4,18 +4,18 @@ const authenticate = require("../middleware/check-auth");
 const Task = require("../models/task");
 
 router.post("/", authenticate, async (req, res) => {
-  const { title, description, status, boardId, subtasks } = req.body;
+  const { title, description, status, boardId:board, subtasks } = req.body;
   try {
-    if (!(title && status && boardId)) {
+    if (!(title && status && board)) {
       throw new Error(
-        "title,status,board - are required fields for creating tasks"
+        "title,status,boardId - are required fields for creating tasks"
       );
     }
     const newTask = await new Task({
       title,
       description,
       status,
-      board: boardId,
+      board,
     }).save();
     const parent = newTask._id;
 
@@ -32,7 +32,7 @@ router.post("/", authenticate, async (req, res) => {
           description,
           status,
           parent,
-          board: boardId,
+          board,
         }).save();
       });
 
