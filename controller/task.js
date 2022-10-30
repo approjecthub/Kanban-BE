@@ -4,7 +4,7 @@ const authenticate = require("../middleware/check-auth");
 const Task = require("../models/task");
 
 router.post("/", authenticate, async (req, res) => {
-  const { title, description, status, boardId:board, subtasks } = req.body;
+  const { title, description, status, boardId: board, subtasks } = req.body;
   try {
     if (!(title && status && board)) {
       throw new Error(
@@ -41,8 +41,12 @@ router.post("/", authenticate, async (req, res) => {
         ...JSON.parse(JSON.stringify(newTask)),
         subtasks: [...subTaskObjs],
       });
-      console.info("task created successfully");
+    } else {
+      res.status(201).send({
+        ...JSON.parse(JSON.stringify(newTask)),
+      });
     }
+    console.info("task created successfully");
   } catch (err) {
     console.error(err);
     res.status(500).send(err.message);
